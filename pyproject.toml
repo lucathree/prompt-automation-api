@@ -8,3 +8,8 @@ dependencies = [
     "django>=5.2.7",
     "djangorestframework>=3.16.1",
 ]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+]
