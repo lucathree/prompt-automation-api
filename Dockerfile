@@ -15,4 +15,4 @@ RUN uv sync --frozen --no-dev --no-cache
 
 ENV PATH="/opt/.venv/bin:$PATH"
 
-WORKDIR /app/prompto
+WORKDIR /app

@@ -11,6 +11,10 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "prompto.settings")
+from prompto.settings import AppEnv
+
+os.environ.setdefault(
+    "DJANGO_SETTINGS_MODULE", f"prompto.settings.{AppEnv.current().value}"
+)
 
 application = get_asgi_application()
