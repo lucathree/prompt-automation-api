@@ -8,6 +8,7 @@ services:
     command: uvicorn prompto.asgi:application --host 0.0.0.0 --port 8000 --reload --proxy-headers
     environment:
       - APP_ENV=local
+      - DB_HOST=db
     volumes:
       - ./:/app
     expose:
