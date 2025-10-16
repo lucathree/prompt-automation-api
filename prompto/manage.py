@@ -3,7 +3,13 @@
 
 import os
 import sys
-from prompto.settings import AppEnv
+from pathlib import Path
+
+# Add parent directory to Python path so prompto module can be imported
+current_dir = Path(__file__).resolve().parent
+sys.path.insert(0, str(current_dir.parent))
+
+from prompto.settings import AppEnv  # noqa: E402
 
 
 def main():
